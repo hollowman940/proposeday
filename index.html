@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special Propose Day Wishes for Swati</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #001f3f; /* Dark blue resembling starry night */
+      color: #fff;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #fff;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+
+    p {
+      font-size: 20px;
+      color: #fff;
+      margin: 10px 0;
+    }
+
+    #hearts {
+      font-size: 72px;
+      margin-top: 20px;
+      animation: heartbeat 1s infinite;
+    }
+
+    .heart {
+      color: #ff0080;
+      margin: 0 5px;
+      transform-origin: center;
+      display: inline-block;
+    }
+
+    #message {
+      font-style: italic;
+      color: #ff8c00;
+      margin-top: 20px;
+      font-size: 24px;
+      letter-spacing: 1px;
+    }
+
+    #stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background-color: #fff;
+      opacity: 0.8;
+      animation: twinkle 1s infinite;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+
+    @keyframes twinkle {
+      0%, 100% {
+        opacity: 0.8;
+      }
+      50% {
+        opacity: 0.3;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Happy Propose Day, Swati!</h1>
+  <p>You are the shining star in my life.</p>
+  <p>Will you make my life as bright as the stars by being with me always?</p>
+  <div id="hearts">
+    <span class="heart">&hearts;</span>
+    <span class="heart">&hearts;</span>
+  </div>
+  <p id="message">Forever and always!</p>
+
+  <!-- Starry sky effect -->
+  <div id="stars"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const starsContainer = document.getElementById('stars');
+
+      function createStar() {
+        const star = document.createElement('div');
+        star.className = 'star';
+
+        const xPos = Math.random() * window.innerWidth;
+        const yPos = Math.random() * window.innerHeight;
+
+        star.style.left = xPos + 'px';
+        star.style.top = yPos + 'px';
+
+        starsContainer.appendChild(star);
+      }
+
+      function createStars() {
+        for (let i = 0; i < 100; i++) {
+          createStar();
+        }
+      }
+
+      createStars();
+    });
+  </script>
+</body>
+</html>
